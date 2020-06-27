@@ -18,8 +18,10 @@ const styles = StyleSheet.create({
   },
 });
 
-const InfiniteHits = ({ hits, hasMore, refine }) => (
-  <FlatList
+const InfiniteHits = ({ hits, hasMore, refine }) => {
+  // console.log('infinite hits: ', hits,)
+  // console.log('infinite hasMore: ', hasMore)  
+  return <FlatList
     data={hits}
     keyExtractor={item => item.objectID}
     ItemSeparatorComponent={() => <View style={styles.separator} />}
@@ -30,7 +32,7 @@ const InfiniteHits = ({ hits, hasMore, refine }) => (
       </View>
     )}
   />
-);
+};
 
 InfiniteHits.propTypes = {
   hits: PropTypes.arrayOf(PropTypes.object).isRequired,

@@ -30,7 +30,7 @@ const SearchBox = ({ currentRefinement, refine }) => {
         style={styles.input}
         onChangeText={value => refine(value)}
         value={currentRefinement}
-        placeholder=""
+        placeholder="Search Device"
       />
     </View>
   )
